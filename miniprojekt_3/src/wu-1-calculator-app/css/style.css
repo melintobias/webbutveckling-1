@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: lcd;
+	src: url(../font/SUBWT___.ttf);
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	--gap: 0.2rem;
+
+	#keyBoard {
+		--btn-size: calc((100% - (3 * var(--gap))) / 4);
+
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--gap);
+
+		& > button {
+			width: 100%;
+			aspect-ratio: 1 / 1;
+
+			&#clear {
+				height: var(--btn-size);
+			}
+
+			&#add,
+			&#sub,
+			&#mul,
+			&#div,
+			&#comma,
+			&#enter {
+				color: #1ea7e6;
+
+				&:hover {
+					color: green;
+					font-weight: bold;
+				}
+			}
+
+			&:hover {
+				color: green;
+				font-weight: bold;
+			}
+		}
+	}
+
+	#lcd {
+		height: 3rem;
+		margin-bottom: calc(var(--gap) * 2);
+
+		background-color: black;
+		color: green;
+		text-align: right;
+		font-family: lcd;
+		border: 1px solid yellow;
+		border-radius: 4px;
+
+		/* iOS Safari fix */
+		&:disabled {
+			opacity: 1;
+			-webkit-text-fill-color: green;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+version: "0.2"
+dictionaries:
+  - css
+  - javascript
+  - html
+language: en,sv-SE
+minWordLength: 0
+words:
+  - gpt
+  - mul
+  - precomposed
+  - pwa
+  - SUBWT
+  - sv
+  - Utbildningsapp
