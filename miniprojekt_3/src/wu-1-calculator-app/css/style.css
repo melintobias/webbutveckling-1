@@ -18,6 +18,8 @@ body {
 
 main {
 	--gap: 0.2rem;
+	--font-size: 2rem;
+	width: min(90vw, 20rem);
 
 	#keyBoard {
 		--btn-size: calc((100% - (3 * var(--gap))) / 4);
@@ -29,6 +31,8 @@ main {
 		& > button {
 			width: 100%;
 			aspect-ratio: 1 / 1;
+
+			font-size: var(--font-size);
 
 			&#clear {
 				height: var(--btn-size);
@@ -58,6 +62,8 @@ main {
 	#lcd {
 		height: 3rem;
 		margin-bottom: calc(var(--gap) * 2);
+		width: 100%;
+		font-size: var(--font-size);
 
 		background-color: black;
 		color: green;
