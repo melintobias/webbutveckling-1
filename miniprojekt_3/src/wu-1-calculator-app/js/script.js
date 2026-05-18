@@ -87,13 +87,16 @@ function setOperation(operation) {
 }
 
 function addComma() {
+	const isEmpty = lcd.value.trim().length === 0
+	const endsWithOperator = /[+−×÷]$/.test(lcd.value)
+	const commaInCurrentMember = /\d+,\d*$/.test(lcd.value)
 	// If LCD is empty or ends with an operator, prepend a zero before the comma
-	if (lcd.value.length === 0 || /[+−×÷]$/.test(lcd.value)) {
+	if (isEmpty || endsWithOperator) {
 		lcd.value += "0,"
 	}
 
 	// Only add a comma if there isn't one already in the current number
-	else if (!/\d+,\d*$/.test(lcd.value)) {
+	else if (!commaInCurrentMember) {
 		lcd.value += ","
 	}
 }
