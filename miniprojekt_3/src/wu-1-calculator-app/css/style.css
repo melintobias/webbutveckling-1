@@ -1,7 +1,7 @@
 * {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 @font-face {
@@ -10,10 +10,10 @@
 }
 
 body {
-	min-height: 100vh;
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	min-height: 100vh;
 }
 
 main {
@@ -25,14 +25,14 @@ main {
 		--btn-size: calc((100% - (3 * var(--gap))) / 4);
 
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
 		gap: var(--gap);
+		grid-template-columns: repeat(4, 1fr);
 
 		& > button {
-			width: 100%;
 			aspect-ratio: 1 / 1;
 
 			font-size: var(--font-size);
+			width: 100%;
 
 			&#clear {
 				height: var(--btn-size);
@@ -60,22 +60,21 @@ main {
 	}
 
 	#lcd {
-		height: 3rem;
-		margin-bottom: calc(var(--gap) * 2);
-		width: 100%;
-		font-size: var(--font-size);
-
 		background-color: black;
-		color: green;
-		text-align: right;
-		font-family: lcd;
 		border: 1px solid yellow;
 		border-radius: 4px;
+		color: green;
+		font-family: lcd;
+		font-size: var(--font-size);
+		height: 3rem;
+		margin-bottom: calc(var(--gap) * 2);
+		text-align: right;
+		width: 100%;
 
 		/* iOS Safari fix */
 		&:disabled {
-			opacity: 1;
 			-webkit-text-fill-color: green;
+			opacity: 1;
 		}
 	}
 }
