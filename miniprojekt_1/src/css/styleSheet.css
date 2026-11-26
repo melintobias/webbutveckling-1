@@ -1,11 +1,3 @@
-/* Ignorera att attributen inte är sorterade; klockan är 19.37 och jag har inte tid :(
-Vad även god och tag hänsyn till faktumet att CSS-validatorn kommer att flagga denna kod
-som mycker felaktigt på grund av SCSS-syntaxen:
-https://sass-lang.com/documentation/syntax/
-
-God kväll!
-*/
-
 * {
     font-family: Arial;
 }
@@ -19,9 +11,9 @@ header {
     display: flex;
 
     & img {
-        margin: 1rem;
         /* Undvik utvidgning av bild */
         display: block;
+        margin: 1rem;
 
     }
 
@@ -44,10 +36,10 @@ header {
     }
 
     & li {
+        color: brown;
         display: inline-block;
         padding: 0.5rem;
         position: relative;
-        color: brown;
 
         &.active,
         &:hover {
@@ -55,15 +47,15 @@ header {
         }
 
         &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            display: block;
-            width: 0;
-            height: 0.1rem;
             background: red;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 0.1rem;
+            left: 0;
+            position: absolute;
             transition: width;
+            width: 0;
         }
 
         &:hover::after {
@@ -78,10 +70,10 @@ header {
 }
 
 main:has(#html5, #css3, #about) {
-    display: flex;
     align-items: flex-start;
-    margin: 1rem;
+    display: flex;
     gap: 1rem;
+    margin: 1rem;
 
     &>section {
         flex: 1;
@@ -90,10 +82,10 @@ main:has(#html5, #css3, #about) {
     & h2 {
         color: white;
         display: inline;
+        margin: 0;
         padding: 0.2rem;
         padding-left: 0;
         padding-top: 0;
-        margin: 0;
     }
 
     p {
@@ -137,9 +129,9 @@ main:has(#html5, #css3, #about) {
 
         &>a {
             background: black;
+            border-radius: 0.33rem 0 0 0;
             color: white;
             padding: 0.25rem;
-            border-radius: 0.33rem 0 0 0;
         }
     }
 }
@@ -186,8 +178,8 @@ article {
     width: 40%;
 
     & table {
-        width: 100%;
         border-collapse: collapse;
+        width: 100%;
 
         & td,
         & th {
@@ -207,9 +199,9 @@ article {
 }
 
 .about {
-    width: 66.7%;
     display: flex;
     gap: 1rem;
+    width: 66.7%;
 
     &>div:first-child {
         flex: 0 0 auto;
@@ -225,15 +217,15 @@ article {
     }
 
     & img {
-        width: 100%;
-        height: auto;
         display: block;
+        height: auto;
+        width: 100%;
     }
 
     .bordered {
+        align-self: flex-start;
         border: 0.1rem solid black;
         border-radius: 0.5rem;
         padding: 0.5rem;
-        align-self: flex-start;
     }
 }
