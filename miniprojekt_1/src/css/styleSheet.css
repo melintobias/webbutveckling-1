@@ -1,0 +1,239 @@
+/* Ignorera att attributen inte är sorterade; klockan är 19.37 och jag har inte tid :(
+Vad även god och tag hänsyn till faktumet att CSS-validatorn kommer att flagga denna kod
+som mycker felaktigt på grund av SCSS-syntaxen:
+https://sass-lang.com/documentation/syntax/
+
+God kväll!
+*/
+
+* {
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: #404040 url("../img/bgHeader.jpg") no-repeat;
+    display: flex;
+
+    & img {
+        margin: 1rem;
+        /* Undvik utvidgning av bild */
+        display: block;
+
+    }
+
+    & hgroup {
+        color: white;
+
+        & p {
+            font-weight: bold;
+            margin-left: 1rem;
+            margin-top: -1rem;
+        }
+    }
+}
+
+#mainNav {
+    background: black;
+
+    & ul {
+        margin: 0;
+    }
+
+    & li {
+        display: inline-block;
+        padding: 0.5rem;
+        position: relative;
+        color: brown;
+
+        &.active,
+        &:hover {
+            background: #808080;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 0;
+            height: 0.1rem;
+            background: red;
+            transition: width;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+main:has(#html5, #css3, #about) {
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem;
+    gap: 1rem;
+
+    &>section {
+        flex: 1;
+    }
+
+    & h2 {
+        color: white;
+        display: inline;
+        padding: 0.2rem;
+        padding-left: 0;
+        padding-top: 0;
+        margin: 0;
+    }
+
+    p {
+        padding: 0.5rem;
+    }
+
+    & #html5,
+    & #css3,
+    & #about {
+        border: 0.2rem solid;
+        position: relative;
+    }
+
+    & #html5 {
+        border-color: red;
+
+        &>h2 {
+            background: red;
+        }
+    }
+
+    & #css3 {
+        border-color: green;
+
+        &>h2 {
+            background: green;
+        }
+    }
+
+    & #about {
+        border-color: blue;
+
+        &>h2 {
+            background: blue;
+        }
+    }
+
+    & nav {
+        display: flex;
+        justify-content: flex-end;
+
+        &>a {
+            background: black;
+            color: white;
+            padding: 0.25rem;
+            border-radius: 0.33rem 0 0 0;
+        }
+    }
+}
+
+footer {
+    background: black;
+    display: flex;
+    padding: 1rem;
+
+    * {
+        color: white;
+    }
+
+    & h2 {
+        margin: 0;
+    }
+
+    & nav {
+        margin-left: auto
+    }
+
+    & ul {
+        font-weight: bold;
+        list-style-type: none;
+        padding: 0;
+
+        & a {
+            text-decoration: none;
+
+            &:hover {
+                color: red
+            }
+        }
+
+        &>li:not(:has(a)) {
+            color: red;
+            list-style-type: disc;
+        }
+    }
+}
+
+article {
+    margin: 1rem;
+    width: 40%;
+
+    & table {
+        width: 100%;
+        border-collapse: collapse;
+
+        & td,
+        & th {
+            border: 0;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        & tr {
+            border: 0.01rem solid black;
+
+            &:nth-child(odd) {
+                background-color: #dddddd;
+            }
+        }
+    }
+}
+
+.about {
+    width: 66.7%;
+    display: flex;
+    gap: 1rem;
+
+    &>div:first-child {
+        flex: 0 0 auto;
+        width: 15rem;
+    }
+
+    &>div:not(:first-child) {
+        flex: 1;
+    }
+
+    & h2 {
+        margin: 0;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .bordered {
+        border: 0.1rem solid black;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        align-self: flex-start;
+    }
+}

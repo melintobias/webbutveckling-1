@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>WebbUtveckling 1</title>
+    <!-- Trailing slash on void elements has no effect and interacts badly with unquoted attribute values. -->
+    <link rel="stylesheet" href="css/styleSheet.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <!-- Trailing slash on void elements has no effect and interacts badly with unquoted attribute values. -->
+            <img src="img/egyLogo.webp" alt="Logga" width="75" height="75">
+            <hgroup>
+                <h1>Webbutveckling 1</h1>
+                <p>Start</p>
+            </hgroup>
+        </header>
+
+        <nav id="mainNav">
+            <ul>
+                <li class="active">HEM</li>
+                <li><a href="pages/html5.html">HTML 5</a></li>
+                <li><a href="pages/css3.html">CSS 3</a></li>
+                <li><a href="pages/about.html">OM</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="html5">
+                <h2>HTML 5</h2>
+                <p>
+                    HTML är ett märkspråk för hypertext och utgör tillsammans med TCP/IP
+                    och HTTP den grundläggande standarden för WWW (World Wide Web,
+                    webben); webbsidor skrivs i allmänhet som HTML och överförs över
+                    Internet med HTTP.
+                </p>
+                <nav><a href="pages/html5.html">Läs mer »</a></nav>
+            </section>
+            <section id="css3">
+                <h2>CSS 3</h2>
+                <p>
+                    Cascading Style Sheets (CSS, på svenska stilmall) är ett språk som
+                    beskriver presentationsstilen för ett strukturerat dokument som till
+                    exempel typsnitt, textstorlek och färg. Tekniken är ett sätt att
+                    anpassa dokumentet med hänsyn till datortyp, skärmupplösning,
+                    färgdjup och installerade typsnitt.
+                </p>
+                <nav><a href="pages/css3.html">Läs mer »</a></nav>
+            </section>
+            <section id="about">
+                <h2>Om</h2>
+                <p>Tobias Melin är en systemutvecklare med ett brett urval intressen, bland annat science fiction och
+                    filosofi.
+                    Genom att effektivisera miljöer han tillhör uppnår han lycka. Det är tämligen underligt att skriva
+                    om sig
+                    själv i tredje person på ett sådant här vis.</p>
+                <nav><a href="pages/about.html">Läs mer »</a></nav>
+            </section>
+        </main>
+        <footer>
+            <address>
+                <!-- Trailing slash on void elements has no effect and interacts badly with unquoted attribute values. -->
+                Tobias Melin
+            </address>
+
+            <nav>
+                <h2>Navigera</h2>
+                <ul>
+                    <li class="active">HEM</li>
+                    <li><a href="pages/html5.html">HTML 5</a></li>
+                    <li><a href="pages/css3.html">CSS 3</a></li>
+                    <li><a href="pages/about.html">OM</a></li>
+                </ul>
+            </nav>
+            <!-- Trailing slash on void elements has no effect and interacts badly with unquoted attribute values. -->
+            <!-- Semikolon -->
+            <br style="clear: both;">
+        </footer>
+    </div>
+</body>
+
+</html>
